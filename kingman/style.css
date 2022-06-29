@@ -1,9 +1,11 @@
 * {
   font-family: 'Rubik Mono One', sans-serif;
+  background-color: black;
 }
 
-#app {
-  font-size: 1rem;
-  text-align: center;
-  margin-top: 60px;
+#reset {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  background-color: pink;
+  color: white;
 }
