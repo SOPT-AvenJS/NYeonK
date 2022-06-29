@@ -1,6 +1,13 @@
 * {
   font-family: 'Rubik Mono One', sans-serif;
-  background-color: black;
+}
+
+#puzzle {
+  width: 100%;
+}
+
+#guesses {
+  width: 100%;
 }
 
 #reset {
