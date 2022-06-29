@@ -1,4 +1,29 @@
 import './style.css'
+import Hangman from './game.js'
+//const { Hangman } = require('./game.js');
+
+const puzzleEl = document.querySelector('#puzzle')
+const guessesEl = document.querySelector('#guesses')
+let game
+
+window.addEventListener('keydown', (e) => {
+  const guess = e.key
+  game.makeGuess(guess)
+  render()
+})
+
+const render = () => {
+  puzzleEl.innerHTML = ''
+  guessesEl.textContent = game.statusMessage
+
+  game.puzzle.split('').forEach((letter) => {
+    const letterEl = document.createElement('span')
+    letterEl.textContent = letter
+    puzzleEl.appendChild(letterEl)
+  })
+}
+
+
 
 const getPuzzle = async (wordCount) => {
   const response = await fetch(`http://puzzle.mead.io/puzzle?wordCount=${wordCount}`)
@@ -12,6 +37,8 @@ const getPuzzle = async (wordCount) => {
 
 const startGame = async () => {
   const puzzle = await getPuzzle('1')
+  game = new Hangman(puzzle, 6)
+  render()
   console.log(puzzle)
 }
 
