@@ -10,17 +10,51 @@ body {
   background-color: black;
 }
 
+header {
+  font-size: 3rem;
+  color: white;
+
+  margin-top: 11rem;
+  margin-right: 9.5rem;
+  margin-left: 56.5rem;
+  text-align: center;
+
+}
+
+.game {
+  margin-top: -7rem;
+  padding: 0 31.5rem 0 10.5rem;
+}
+
 #puzzle {
-  width: 100%;
+  font-size: 1.7rem;
+  text-align: center;
 }
 
 #guesses {
-  width: 100%;
+  font-size: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+
+}
+
+#btn {
+  text-align: center;
 }
 
 #reset {
+  margin-top: 1rem;
   padding: 0.5rem;
-  font-size: 1.5rem;
-  background-color: pink;
+  font-size: 1.2rem;
+  background-color: rgb(255, 165, 213);
   color: white;
+  border: solid;
+  border-color: black;
+}
+
+#img {
+  display: block;
+  margin-top: 3.5rem;
+  margin-right: 15rem;
+  margin-left: auto;
 }
