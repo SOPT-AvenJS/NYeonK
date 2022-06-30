@@ -53,6 +53,7 @@ class Hangman {
     let num_lives = 6;
 
     if (this.status !== 'playing') {
+      img.setAttribute('src', 'img/hangman0.png');
       return
     }
 
