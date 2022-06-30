@@ -1,6 +1,5 @@
 import './style.css'
 import Hangman from './game.js'
-//const { Hangman } = require('./game.js');
 
 const puzzleEl = document.querySelector('#puzzle')
 const guessesEl = document.querySelector('#guesses')
@@ -37,6 +36,7 @@ const getPuzzle = async (wordCount) => {
 
 const startGame = async () => {
   const puzzle = await getPuzzle('1')
+  img.setAttribute('src', 'img/hangman0.png');
   game = new Hangman(puzzle, 6)
   render()
   console.log(puzzle)
