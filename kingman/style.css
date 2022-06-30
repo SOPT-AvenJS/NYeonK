@@ -2,6 +2,14 @@
   font-family: 'Rubik Mono One', sans-serif;
 }
 
+body {
+  background-image: url('img/background.png');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: top;
+  background-color: black;
+}
+
 #puzzle {
   width: 100%;
 }
