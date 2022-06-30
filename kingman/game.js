@@ -4,6 +4,7 @@ class Hangman {
     this.remainingGuesses = remainingGuesses
     this.guessedLetters = []
     this.status = 'playing'
+    this.num_lives = 6
   }
 
   
@@ -41,11 +42,15 @@ class Hangman {
     })
     return puzzle
   }
-
+  
   makeGuess(guess) {
     guess = guess.toLowerCase()
     const isUnique = !this.guessedLetters.includes(guess)
     const isBadGuess = !this.word.includes(guess)
+
+    const img = document.getElementById("img");
+    let imgCount = 6;
+    let num_lives = 6;
 
     if (this.status !== 'playing') {
       return
@@ -56,9 +61,11 @@ class Hangman {
     }
 
     if (isUnique && isBadGuess) {
-      this.remainingGuesses--
+      this.remainingGuesses--;
+      this.num_lives --;
+      console.log(num_lives)
+      img.setAttribute('src', 'img/hangman'+ (imgCount-this.num_lives) + '.png');
     }
-
     this.calculateStatus()
   }
 }
