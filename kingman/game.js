@@ -63,7 +63,7 @@ class Hangman {
     if (isUnique && isBadGuess) {
       this.remainingGuesses--;
       this.numLives --;
-      img.setAttribute('src', `img/hangman`+ (imgCount-this.num_lives) + `.png`);
+      img.setAttribute('src', `img/hangman`+ (imgCount-this.numLives) + `.png`);
     }
     this.calculateStatus()
   }
