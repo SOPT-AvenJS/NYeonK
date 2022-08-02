@@ -7,13 +7,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    
     <title>KingMan</title>
+
     <script type="module" src="/main.js"></script>
+    <script type="module" src="/game.js"></script>
   </head>
   <body>
     <header>KINGMAN</header>
-    <section></section>
-    <button type="button" id="reset">RESET</button>
+    <section class="game">
+      <div id="puzzle"></div>
+      <div id="guesses"></div>
+      <div id="btn">
+        <button type="button" id="reset">RESET</button>
+      </div>
+    </section>
+    <img src="img/hangman0.png" id="img">
 
   </body>
 </html>
