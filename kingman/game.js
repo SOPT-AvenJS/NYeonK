@@ -4,7 +4,7 @@ class Hangman {
     this.remainingGuesses = remainingGuesses
     this.guessedLetters = []
     this.status = 'playing'
-    this.num_lives = 6
+    this.numLives = 6
   }
 
   
@@ -50,7 +50,6 @@ class Hangman {
 
     const img = document.getElementById("img");
     let imgCount = 6;
-    let num_lives = 6;
 
     if (this.status !== 'playing') {
       img.setAttribute('src', 'img/hangman0.png');
@@ -63,9 +62,8 @@ class Hangman {
 
     if (isUnique && isBadGuess) {
       this.remainingGuesses--;
-      this.num_lives --;
-      console.log(num_lives)
-      img.setAttribute('src', 'img/hangman'+ (imgCount-this.num_lives) + '.png');
+      this.numLives --;
+      img.setAttribute('src', `img/hangman`+ (imgCount-this.num_lives) + `.png`);
     }
     this.calculateStatus()
   }
