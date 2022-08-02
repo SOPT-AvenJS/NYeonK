@@ -14,11 +14,8 @@ header {
   font-size: 3rem;
   color: white;
 
-  margin-top: 11rem;
-  margin-right: 9.5rem;
-  margin-left: 56.5rem;
+  margin: 11rem 9.5rem 0 56.5rem;
   text-align: center;
-
 }
 
 .game {

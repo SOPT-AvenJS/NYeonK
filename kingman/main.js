@@ -24,8 +24,8 @@ const render = () => {
 
 
 
-const getPuzzle = async (wordCount) => {
-  const response = await fetch(`http://puzzle.mead.io/puzzle?wordCount=${wordCount}`)
+const getPuzzle = async () => {
+  const response = await fetch(`http://puzzle.mead.io/puzzle?wordCount=1`)
   if (response.status === 200) {
       const data = await response.json()
       return data.puzzle
@@ -35,11 +35,10 @@ const getPuzzle = async (wordCount) => {
 }
 
 const startGame = async () => {
-  const puzzle = await getPuzzle('1')
+  const puzzle = await getPuzzle()
   img.setAttribute('src', 'img/hangman0.png');
   game = new Hangman(puzzle, 6)
   render()
-  console.log(puzzle)
 }
 
 document.querySelector('#reset').addEventListener('click', startGame)
